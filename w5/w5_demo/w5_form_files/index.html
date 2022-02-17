@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--The type of font we are using-->
+    <meta charset="UTF-8">
+    <!--Tells the -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Your Name Here">
+    <meta name="description" content="Default HTML Page for SE 111">
+    
+    <link type="text/css" rel="stylesheet" href="style.css">
+
+    <title>Week 5 | Tables and Forms</title>
+
+    <style>
+        table, tr, td, th
+        {
+        border:1px solid black;
+        }
+    </style>
+</head>
+
+
+<body>
+    <h1>Birthday Party Registration Form</h1>
+
+    <table> <!--First table-->
+        <thead><!--Header-->
+            <tr>
+                <th>Labels</th>
+                <th>Form Fields</th>
+            </tr>
+        </thead><!--Header for guest info-->
+            <tbody><!--Body for guest info-->
+
+                <tr><!--Parent/Guardian Name-->                
+                    <td><label for="gfirst">Parent/Guardian Name</label> </td>
+                    <td>
+                        <input type="text"required maxlength="20" id="g-first" name="gfirst" placeholder="First Name">
+                        <br>
+                        <input type="text"required maxlength="20" id="g-last" name="gfirst" placeholder="Last Name">
+                    </td>
+                </tr><!--Parent/Guardian Name-->
+    
+                <tr><!--Child's first name-->
+                    <td><label for="cfirst">Child's First Name</label></td>
+                    <td>
+                        <input type="text"required id="c-first" name="cfirst" placeholder="Child's First Name">
+                    </td>
+                </tr><!--Child's first name-->
+
+                <tr><!--Child's age-->
+                    <td><label for="age">Child's age</label></td>
+                    <td>
+                        <input type="number"required name="age" value="3">
+                    </td>
+                </tr><!--Child's age-->
+            </tbody><!--End of guest info-->
+
+        <thead> <!--Header for time info-->
+            <tr>
+                <th>Date and Time</th>
+            </tr>
+        </thead><!--Header for time info-->
+            <tbody><!--Body for time info-->
+
+                <tr><!--Date-->
+                    <td><label for="date">Date</label></td>
+                    <td>
+                        <input type="date"required name="date">
+                    </td>
+                </tr><!--Date-->
+
+                <tr> <!--Start time-->
+                    <td><label for="time">Start Time</label></td>
+                    <td>
+                        <input type="time"required name="time">
+                    </td>
+                </tr><!--Start time-->
+
+                <tr><!--Number of guests-->
+                    <td><label for="guests">Number of Guests</label></td>
+                    <td>
+                        <input type="number" name="guests" value=5>
+                    </td>
+                </tr><!--Number of guests-->
+            </tbody> <!--End of time info-->
+
+        <thead><!--Header for food-->
+            <tr>
+                <th>Food</th>
+            </tr>
+        </thead><!--Header for food-->
+            <tbody> <!--Body for food info-->
+
+                <tr><!--Size of drinks-->
+                    <td><label for="size">Size</label></td>
+                    <td>
+                        <input type="radio" name="size" value="sm">
+                        <input type="radio" name="size" value="md">
+                        <input type="radio" name="size" value="lg">
+                    </td>
+                </tr><!--Size of drinks-->
+
+                <tr><!--Drinks--></tr>
+                    <td><label for="drinks">Drinks</label></td>
+                    <td>
+                        <label for=drink1>Coke</label><br>
+                        <input type="checkbox"required name="drink1" checked="true" value="coke">
+
+                        <label for=drink2>Sprite</label><br>
+                        <input type="checkbox"required name="drink2" checked="true" value="sprite">
+
+                        <label for=drink3>Fruit Punch</label><br>
+                        <input type="checkbox"required name="drink3" checked="true" value="fruit punch">
+
+                        <label for=drink4>Lemonade</label><br>
+                        <input type="checkbox"required name="drink4" checked="true" value="lemonade">
+
+                        <label for=drink5>Iced Tea</label>
+                        <input type="checkbox"required name="drink5" checked="true" value="iced tea">
+                    </td>
+                </tr>
+
+
+                <label for="cake">
+                    Cake
+                </label>
+
+                <label for="colors">
+                    Color Scheme
+                </label>
+
+                <label for="comments">
+                    Additional Comments
+                </label>
+            </tbody> <!--Body for food-->
+    </table><!--First table-->
+    
+</body>
+</html>
