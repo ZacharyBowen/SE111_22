@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <!--Tells the -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Your Name Here">
+    <meta name="author" content="Zachary Bowen">
     <meta name="description" content="Default HTML Page for SE 111">
     
     <link type="text/css" rel="stylesheet" href="style.css">
@@ -32,7 +32,7 @@
                 <th>Labels</th>
                 <th>Form Fields</th>
             </tr>
-        </thead><!--Header for guest info-->
+        </thead>
             <tbody><!--Body for guest info-->
 
                 <tr><!--Parent/Guardian Name-->                
@@ -42,21 +42,22 @@
                         <br>
                         <input type="text" required maxlength="20" id="g-last" name="gfirst" placeholder="Last Name">
                     </td>
-                </tr><!--Parent/Guardian Name-->
+                </tr>
     
                 <tr><!--Child's first name-->
                     <td><label for="cfirst">Child's First Name</label></td>
                     <td>
                         <input type="text" required id="c-first" name="cfirst" placeholder="Child's First Name">
                     </td>
-                </tr><!--Child's first name-->
+                </tr>
 
                 <tr><!--Child's age-->
                     <td><label for="age">Child's age</label></td>
                     <td>
                         <input type="number" required name="age" value="3">
                     </td>
-                </tr><!--Child's age-->
+                </tr>
+
             </tbody><!--End of guest info-->
 
 
@@ -89,7 +90,7 @@
                 </tr>
             </tbody> <!--End of time info-->
 
-            <tr><th style="font-size: 30px;">Food</th>
+            <tr><th style="font-size: 30px;">Food</th> <!--Header for food-->
                 <td>&nbsp;</td>
             </tr>
 
@@ -107,24 +108,24 @@
                         <input type="radio" name="size" value="lg">
                         <label for="size1">lg</label>
                     </td>
-                </tr><!--Size of drinks-->
+                </tr>
 
                 <tr><!--Drinks-->
                     <td><label for="drinks">Drinks</label></td>
                     <td>
-                        <input type="checkbox" required name="drink1" checked = "true" value="coke">
+                        <input type="checkbox" name="drink1" checked = "true" value="coke">
                         <label for=drink1>Coke</label><br>
 
-                        <input type="checkbox" required name="drink2" value="sprite">
+                        <input type="checkbox" name="drink2" value="sprite">
                         <label for=drink2>Sprite</label><br>
 
-                        <input type="checkbox" required name="drink3" value="fruit punch">
+                        <input type="checkbox" name="drink3" value="fruit punch">
                         <label for=drink2>Fruit Punch</label><br>
 
-                        <input type="checkbox" required name="drink4" value="lemonade">
+                        <input type="checkbox" name="drink4" value="lemonade">
                         <label for=drink4>Lemonade</label><br>
 
-                        <input type="checkbox" required name="drink5" value="iced tea">
+                        <input type="checkbox" name="drink5" value="iced tea">
                         <label for=drink5>Iced Tea</label>
                     </td>
                 </tr>
@@ -139,7 +140,7 @@
                         </select>
                     </td>
                 </tr><!--Cake-->
-            </tbody>
+            </tbody><!--End of body for food-->
 
             <tr><th style="font-size: 30px;">Decorations</th>
             <td>&nbsp;</td>
@@ -147,14 +148,14 @@
 
             <tbody> <!--Body for decoration info-->
                 
-                <tr>
+                <tr> <!--Color Scheme-->
                     <td><label for="colors">Color Scheme</label></td>
                     <td>
                         <input type="color" name="colors">
                     </td>
                 </tr>
 
-                <tr>
+                <tr> <!--Additional Comments-->
                     <td><label for="comments">Additional Comments</label></td>
                     <td>
                         <textarea placeholder="Please add any additional comments here" name="comments"></textarea>
@@ -162,7 +163,7 @@
                 </tr>
 
 
-                <tfoot>
+                <tfoot> <!--Footer-->
                     <tr>
                     <td> &nbsp; </td>
                     <td> <input type="submit" value="Submit"> </td>
