@@ -16,12 +16,8 @@
     <!--Javascript starts here-->
     <script>
         //Variable Declaration and assignment
-        var twentyPercent   = 0.20
         var uncleSamsCut    = 0
         var netPay          = 0
-        var displayCut      = 0
-        var displayGross    = 0
-        var displayNet      = 0
 
         //prompts user to enter in their gross pay, and hours worked
         var grossPayStr     = prompt('What is your grosspay over a 2 week period?')
@@ -33,12 +29,14 @@
         uncleSamsCut     = (grossPayNum * 0.20)
         netPay           = (grossPayNum - uncleSamsCut)
 
-        console.log(grossPayNum);
-        console.log(uncleSamsCut);
-        console.log(netPay);
-        //Alerts the user to the results
-        alert("Gross Pay = $" + grossPayNum + "\n" + "Uncle Sam's Cut = $" + uncleSamsCut + "\n" + "Net Pay = $" +  netPay);
+        let roundedGross  = grossPayNum.toFixed(2);
+        let roundedSam    = uncleSamsCut.toFixed(2);
+        let roundedNet    = netPay.toFixed(2);
 
+        //Alerts the user to the results
+        alert("Gross Pay = $" + roundedGross + "\n" + "Uncle Sam's Cut = $" + roundedSam + "\n" + "Net Pay = $" +  roundedNet);
+
+        //Shows up in the console.
         console.log(uncleSamsCut);
         console.log(grossPayNum);
         console.log(netPay);
