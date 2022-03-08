@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W8 JS Demo</title>
+</head>
+<body>
+    <h1>W8 Demo | Javascript Arrays & Objects</h1>
+
+    <div id ="output">
+
+
+    </div>
+    <!--Javascript code below-->
+    <script>
+        //Create a populated (has data) array
+        var people = ['Katie','Conner','Zach','Stephen','Cody','Amara','Olivia']
+
+        console.log(people) //Entire set of data values
+        console.log(people[3]) //One value
+        console.log('There are ${people.length} values in the people array.')
+
+        //to reate an empty array
+        var newArray = []
+
+        //add further data to an existing array
+        people[7] = 'Rimsha'
+
+        people.push('Mike') //Now at people[8]
+
+        var name = 'james'
+        people.push(name) //Now at people[9]
+
+        console.log(people)
+
+        //create a parallel array
+        var colors = ['grey','blue','red','green','black','turquoise','purple','n/a','n/a','n/a']
+
+        console.log("${people[3]}'s favorite color is {colors[5]}")
+
+        for(let index = 0; index < people.length; index++)
+        {
+            console.log("#${index} : ${people[index]}'s favorite color is {colors[index]}")
+            classHTML.push('SE111.22')
+        }
+
+        //2D Arrays
+        var cars = []
+        cars[0]  = ['MAKE', 'Ford', 'Chevy', 'Toyota', 'Honda']
+        cars[1]  = ['MODELS', 'F-150', 'Cavalier', 'Camry', 'Prelude']
+        cars[2]  = ['YEARS', '2016', '2006', '1999', '1994']
+
+        console.log("Kt's favorite childhood car was a ${cars[1][4]}")
+
+        //create a new OBJECT
+        var person1 = {
+            first: 'Katie',
+            last:  'Tuchon',
+            age: 32,
+            hasPets: true,
+            classes: ['SE111', 'VGD129', 'GMW251'],
+            pets: {dogs: ['George', 'Marlowe'], cats: ['Jack'], birds: []},
+            greeting: function(){alert('hi there ${this.first} ${this.last}')} // how methods are made
+        }
+
+        console.log(person1)        //Entire object + all properties
+        console.log(person1.first)  //Specific property value of
+        console.log(person1.classes[0])
+        console.log(person1.pets.dogs[0])
+
+        person1.father = 'Marty' //add to an object
+        console.log(person1)
+        person1.pets.bird.push('Tweetie')
+        console.log(person1.pets.birds)
+
+        //call the method
+        person1.greeting()
+    </script>
+
+</body>
+</html>
