@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Zachary Bowen">
+    <meta name="description" content="W6 Worksheet">
+    <title>W6 | Intro</title>
+</head>
+<body>
+    <h1>W6 | JS Intro Demo</h1>
+    <h3>
+        <a href="index.html">W6 Worksheet</a>
+    </h3>
+    <!--Javascript starts here-->
+    <script>
+        //Variable Declaration and assignment
+        var uncleSamsCut    = 0
+        var netPay          = 0
+
+        //prompts user to enter in their gross pay, and hours worked
+        var grossPayStr     = prompt('What is your grosspay over a 2 week period?')
+        var hoursWorkStr    = prompt('What is your hours worked over a 2 week period?')
+        var grossPayNum     = Number(grossPayStr)
+        var hoursWorkNum    = Number(hoursWorkStr)
+
+        //Calculates and sets up
+        uncleSamsCut     = (grossPayNum * 0.20)
+        netPay           = (grossPayNum - uncleSamsCut)
+
+        let roundedGross  = grossPayNum.toFixed(2);
+        let roundedSam    = uncleSamsCut.toFixed(2);
+        let roundedNet    = netPay.toFixed(2);
+
+        //Alerts the user to the results
+        alert("Gross Pay = $" + roundedGross + "\n" + "Uncle Sam's Cut = $" + roundedSam + "\n" + "Net Pay = $" +  roundedNet);
+
+        //Shows up in the console.
+        console.log(uncleSamsCut);
+        console.log(grossPayNum);
+        console.log(netPay);
+        
+
+    </script>
+</body>
+</html>
