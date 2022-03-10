@@ -2,91 +2,140 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>W8 JS Demo</title>
+    <title>Week 8 | Homework Assignment</title>
 </head>
 <body>
-    <h1>W8 Demo | Javascript Arrays & Objects</h1>
 
-    <div id ="output">
+    <h1>List Of People</h1>
+	<p>
+		Please fill in the form and click the submit button.
+	</p>
+	<div>
+		<table>
+			<tr>
+				<td><label for="first">First Name</label></td>
+				<td><input id="first" type="text" name="first" placeholder="Ivan"></td>
+			</tr>
+			<tr>
+				<td><label for="last">Last Name</label></td>
+				<td><input id="last" type="text" name="last" placeholder="Drago"></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><input id="button" type="button" value="submit"></td>
+			</tr>
+		</table>
+	<div>
+	<div id="output">
+	
+	</div>
 
-
-    </div>
-    <!--Javascript code below-->
+	<!--The script tag should go after the HMTL, but inside of the body.-->
+	<!--JavaScript cannot find tags, if they are not parsed before the script runs-->
     <script>
-        //Create a populated (has data) array
-        var people = ['Katie','Conner','Zach','Stephen','Cody','Amara','Olivia']
+	
+		//Store the elements (tags) in variables
+		var fname = document.querySelector('#first')
+		var lname = document.querySelector('#last')
+		var button = document.querySelector('#button')
+		
 
-        console.log(people) //Entire set of data values
-        console.log(people[3]) //One value
-        console.log('There are ${people.length} values in the people array.')
+		//Make an array to store the people
+		var people = []
 
-        //to reate an empty array
-        var newArray = []
+		//Make the button clickable. When clicked it calls the calcAndDisplay function.
+		document.querySelector('#button').addEventListener(`click`, calcAndDisplay)
+		
+		
+		/*-----------------------------------------------------
+		Will add objects into the people array. 
+		Then will bubble sort the array and print each person to the screen.
+		The output should resemble: 
+			FIRST: Cersei
+			LAST: Lannister
+			_________________________
+			FIRST: Arya
+			LAST: Stark
+			_________________________
+			FIRST: Daenerys
+			LAST: Targaryen
+			_________________________
+		--------------------------------------------------------*/
 
-        //add further data to an existing array
-        people[7] = 'Rimsha'
+		function calcAndDisplay(e)
+		{
+			//Create an object called person.
+			//Add the following properties:
+			    //1. first: will be a string that uses the first Input's value
+				//2. last: will be a string that uses the last Input's value
 
-        people.push('Mike') //Now at people[8]
+            var person = {
+				first: fname.value,
+				last: lname.value
 
-        var name = 'james'
-        people.push(name) //Now at people[9]
+            }//end of person object
 
-        console.log(people)
+			//Add the person object into the people array by using the .push() array method.
+			people.push(person)
+			
 
-        //create a parallel array
-        var colors = ['grey','blue','red','green','black','turquoise','purple','n/a','n/a','n/a']
+			//Bubble sort people on the last name
+			for(let i=0; i < people.length-1; i++)
+			{
+				for(let j=0; j < people.length-1; j++)
+				{
+					if(people[j].last > people[j+1].last)
+					{
+						let temp = people[j]
+						people[j] = people[j+1]
+						people[j+1] = temp
+					}
+				}
+			}//end of bubble sort algorithm!
 
-        console.log("${people[3]}'s favorite color is {colors[5]}")
+			//console.log the people array to check that the people array is formatted correctly and is populated with the correct objects
+			console.log(people)
+			
 
-        for(let index = 0; index < people.length; index++)
-        {
-            console.log("#${index} : ${people[index]}'s favorite color is {colors[index]}")
-            classHTML.push('SE111.22')
-        }
+			//create a variable called 'output' that has an empty string value stored to 
+			output = 'value'
+			
 
-        //2D Arrays
-        var cars = []
-        cars[0]  = ['MAKE', 'Ford', 'Chevy', 'Toyota', 'Honda']
-        cars[1]  = ['MODELS', 'F-150', 'Cavalier', 'Camry', 'Prelude']
-        cars[2]  = ['YEARS', '2016', '2006', '1999', '1994']
+			//Loop through the objects in the people array
+			for(i = 0; i < people.length; i++)
+            {
 
-        console.log("Kt's favorite childhood car was a ${cars[1][4]}")
+				//Loop through each property in the object
+				for(key in people[i])
+                {
+					//The output should use the key set to uppercase using the .toUpperCase() String method as a title and the value of the key.
+					//Output will resemble:
+					//FIRST: Ivan
+					//LAST: Drago
+					output += `<p><b>${key.toUpperCase()}</b>: ${people[i][key]}</p>`
+					
+				
 
-        //create a new OBJECT
-        var person1 = {
-            first: 'Katie',
-            last:  'Tuchon',
-            age: 32,
-            hasPets: true,
-            classes: ['SE111', 'VGD129', 'GMW251'],
-            pets: {dogs: ['George', 'Marlowe'], cats: ['Jack'], birds: []},
-            greeting: function(){alert('hi there ${this.first} ${this.last}')} // how methods are made
-        }
-
-        console.log(person1)        //Entire object + all properties
-        console.log(person1.first)  //Specific property value of
-        console.log(person1.classes[0])
-        console.log(person1.pets.dogs[0])
-
-        person1.father = 'Marty' //add to an object
-        console.log(person1)
-        person1.pets.bird.push('Tweetie')
-        console.log(person1.pets.birds)
-
-        //call the method
-        person1.greeting()
-
-        //homework
-        var humans = [
-            persons1, //can populate
-            person2
+                }
+                //add a <hr> to the output at the end of this outter loop so a horizontal rule is displayed inbetween each person being displayed to the screen.
+				output += `<hr>`
 
 
+			}//end of loop going through people array to edit 'output'
 
-        ]
+
+				//log the output string
+				console.log(`#output`)
+				//replace the outputDiv's inner HTML with the output string
+				document.querySelector(`#outputDiv`).innerHTML = (`#output`)
+				
+
+
+
+		}
+	
     </script>
-
+    
 </body>
 </html>
