@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Demo</title>
+    <style>
+        #simpson{
+            background-color:yellow;
+        }
+        #griffin{
+            background-color:limegreen;
+        }
+        #bundy{
+            background-color:orange;
+        }
+        .dad{
+            font-weight:bold;
+        }
+        .mom{
+            font-style:italic;
+        }
+        .son{
+            text-decoration:underline;
+        }
+        .daughter{
+            font-family:"Comic Sans MS";
+        }
+        .boy
+        {
+            background-color:paleturquoise;
+        }
+        .girl
+        {
+            background-color:pink;
+        }
+        .hide
+        {
+            display:none;
+        }
+        .parent{
+            font-size:36px;
+        }
+        .child{
+            font-size:18px;
+        }
+        .boy.child{
+            text-transform:uppercase; 
+        }
+        #simpson p{
+            border:3px solid black;
+        }
+
+        #griffin .girl::after{
+            content:" -girl"
+        }
+       
+    </style>
+</head>
+<body>
+    <a href="#" id="simpson-link">show simpsons</a>
+    <a href="#" id="griffin-link">show griffins</a>
+    <a href="#" id="bundy-link">show bundies</a>
+    <a href="#" id="all-link">show all</a>
+    <div id="simpson">
+        <p class="dad boy">Homer</p>
+        <p class="mom girl">Marge</p>
+        <p class="boy">Bart</p>
+        <p class="girl">Lisa</p>
+        <p class="girl">Maggie</p>
+    </div>
+    <div id="griffin">
+        <p class="dad boy">Peter</p>
+        <p class="girl">Lois</p>
+        <p class="girl">Meg</p>
+        <p class="boy">Chris</p>
+        <p class="boy">Stewie</p>
+    </div>
+    <div id="bundy">
+        <p class="dad boy">Al</p>
+        <p class="mom girl">Peggy</p>
+        <p class="girl">Kelly</p>
+        <p class="boy">Bud</p>
+    </div>
+    <script>
+        
+        var links = document.querySelectorAll(`a`)
+        var div = document.querySelectorAll(`div`)
+
+        links[0].addEventListener(`click`, (e)=>{
+            e.preventDefault();
+            div[0].classList.remove(`hide`);
+            div[1].classList.add(`hide`);
+            div[2].classList.add(`hide`);
+        })
+
+        links[1].addEventListener(`click`, (e)=>{
+            e.preventDefault();
+            div[0].classList.add(`hide`);
+            div[1].classList.remove(`hide`);
+            div[2].classList.add(`hide`);
+        })
+
+        links[2].addEventListener(`click`, (e)=>{
+            e.preventDefault();
+            div[0].classList.add(`hide`);
+            div[1].classList.remove(`hide`);
+            div[2].classList.add(`hide`);
+        })
+
+        links[3].addEventListener(`click`, (e)=>{
+            e.preventDefault();
+            div[0].classList.remove(`hide`);
+            div[1].classList.remove(`hide`);
+            div[2].classList.remove(`hide`);
+        })
+
+    </script>
+</body>
+</html>
