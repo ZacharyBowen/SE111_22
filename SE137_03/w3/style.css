@@ -1,0 +1,54 @@
+@charset "UTF-8";
+
+/*applies to everything, and you should for the next couple of weeks*/
+*{
+    box-sizing: border-box;
+}
+html, body{
+    border:1px solid black;
+    margin:0; /*ditch the margin on the body*/
+    height:100;
+}
+
+
+main{
+    background-color: lightgrey;
+    display:grid;
+    grid-template-areas: 'hed hed hed hed'
+                         'nav sec sec sec'
+                         'nav sec sec sec'
+                         'fot fot fot fot'
+}
+@media(min-width:1080px){
+    main{
+        background-color: lightgrey;
+        display:grid;
+        grid-template-areas: 'hed hed hed hed'
+                             'nav sec sec sec'
+                             'nav sec sec sec'
+                             'fot fot fot fot'
+    }
+}
+header{
+    background-color: #ddd;
+    grid-area: hed;
+}
+h1{
+    margin:0px;
+}
+nav{
+    background-color: #aaa;
+    grid-area: nav;
+}
+section{
+    background-color: #fff;
+    min-height:300px;
+    grid-area: sec;
+}
+footer{
+    background-color: #000;
+    color: azure;
+    grid-area: fot;
+}
+
+/*Instead of using HR tags use border bottom tags 5px. border-bottom:5px solid black;*/
