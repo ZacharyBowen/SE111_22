@@ -7,10 +7,11 @@ body{
 #nav{
     border-bottom:2px solid black;
     background-color:grey;
+    text-decoration:none;
     color:white;
-    word-spacing:850px;
+    width: 98.9%;
     text-align:center;
-    padding:20px;
+    padding: 10px;
     display:inline-block;
 }
 
