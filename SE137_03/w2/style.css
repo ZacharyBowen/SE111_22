@@ -11,8 +11,9 @@ body{
     color:white;
     width: 98.9%;
     text-align:center;
-    padding: 10px;
+    margin:auto;
     display:inline-block;
+    justify-content: space-between;
 }
 
 #bio{
