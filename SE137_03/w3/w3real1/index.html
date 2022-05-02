@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W1 Assignment 2 | Bio Page | Zachary Bowen</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <header div class="item1">
+            <h1>Zachary Bowen</h1>
+        </header>
+        
+        <nav>
+            <a href="#" id="bio-link" class="nav-link">Bio</a>
+            <a href="#" id="edu-link" class="nav-link">Education</a>
+            <a href="#" id="hob-link" class="nav-link">Hobbies</a>
+        </nav>
+        
+            <section class="bio" div class="item2">
+                <header>
+                    <h2>Bio</h2>
+                </header>
+                    <!--<img src="images/balloon.jpg" width ="300" height ="300" alt="A picture of me, totally.">-->
+                    <p>
+                        Hello, my name is Zachary Bowen. I'm a student attending the New England Institute of Technology, it's my third semester. I am currently pursuing my associate's 
+                        6degree in IT, after that I plan on getting my Bachelors in Software/Engineering. I have always had an interest in programming technology, I want to make something 
+                        that can be of use to people, or even for entertainment. A comfortable pay would also be nice.
+                        <br>
+                        I am determined to challenge myself and improve every day. I aim to prove myself to my family and be the first one to graduate from college, it has always been a goal
+                        of mine. I've always struggled with school, but considering how far i've made it, and how I keep on going. I think college is the right path for me. I have many ambitions
+                        and goals after college, I would love to learn music/art/writing once I have more free time.
+                    </p>
+            </section> <!--End of bio section-->
+
+            <section class="hobbies" div class="item3">
+                <h2>Hobbies</h2>
+                <ol type="1">
+                    <li>Dungeons and Dragons</li>
+                    <li>Video Games</li>
+                    <li>Writing</li>
+                </ol>
+            </section> <!--End of hobbies section-->
+
+            <section class="education" div class="item4">
+                <h2>Schooling</h2>
+                <ul>
+                    <li><a href="https://www.ccri.edu/" target="_blank">Community College of Rhode Island</a></li>
+                    <li>Pilgrim High School</li>
+                    <li>Warwick Career and Technical Center</li>
+                </ul>
+            </section> <!--End of education section-->
+
+        <footer divclass="item5">
+            <div id="footer">
+                <p>&copy;<b>2022 Zachary Bowen</b></p>
+            </div>
+        </footer>
+    </main>
+
+<script>
+    //Variable
+    var bioinfo = document.querySelector(`#bio`)
+    var education = document.querySelector(`#ed`)
+    var hobbies = document.querySelector(`#hobbies`)
+
+    //Links
+    var bioLink = document.querySelector(`#bio-link`)
+    var eduLink = document.querySelector(`#edu-link`)
+    var hobLink = document.querySelector(`#hob-link`)
+
+    //Bio function
+    bioLink.addEventListener(`click`, showBio)
+    function showBio(e)
+    {
+        //keeps link from navigating to another URL
+        e.preventDefault()
+        bioinfo.classList.remove(`hide`)
+        education.classList.add(`hide`)
+        hobbies.classList.add(`hide`)
+
+    }
+    //Education function
+    eduLink.addEventListener(`click`, showEdu)
+    function showEdu(e)
+    {
+        e.preventDefault()
+        education.classList.remove(`hide`)
+        bioinfo.classList.add(`hide`)
+        hobbies.classList.add(`hide`)
+    }
+    //Hobbies function
+    hobLink.addEventListener(`click`, showHob)
+    function showHob(e)
+    {
+        e.preventDefault()
+        hobbies.classList.remove(`hide`)
+        bioinfo.classList.add(`hide`)
+        education.classList.add(`hide`)
+    }
+</script>
+   
+</body>
+</html>

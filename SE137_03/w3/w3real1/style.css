@@ -1,0 +1,103 @@
+@charset "UTF-8";
+
+*{
+    box-sizing: border-box;
+}
+
+html, body{
+    height:100vh;
+    margin: 0;
+}
+
+nav{
+    display:none;
+}
+
+main{
+    background-color:#220A28;
+    display:grid;
+    grid-template-areas:
+        'hed hed hed hed hed hed'
+        'bio bio bio bio bio bio'
+        'bio bio bio bio bio bio'
+        'bio bio bio bio bio bio'
+        'bio bio bio bio bio bio'
+        'bio bio bio bio bio bio'
+        'bio bio bio bio bio bio'
+        'hob hob hob hob edu edu'
+        'hob hob hob hob edu edu'
+        'hob hob hob hob edu edu'
+        'fot fot fot fot fot fot';
+    gap:10px;
+}
+header{
+    grid-area: hed;
+    background:#220A28;
+    margin-top: 0;
+}
+
+h1{
+    font-family:'Inter';
+    font-style:normal;
+    font-weight:700;
+    font-size:20px;
+    line-height:22px;
+    padding: 18px 1220px 29px 25px;
+    color:#FFFFFF;
+}
+
+.bio{
+    grid-area:bio;
+}
+.bio header{
+    height:42px;
+    background:#551966;
+    color: #FFFFFF;
+    margin: 18px 18px 15px 13px;
+}
+
+section.bio {
+    background: #76238E;
+    /* padding: 22px 19px 424px 20px; */
+    margin: 37px 19px 20px 20px
+}
+
+.bio p{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FFFFFF;
+    width: 1370px;
+    height: 346px;
+    left:33px;
+    top:229;
+    background:#551966;
+     margin: 37px 19px 20px 13px
+}
+
+.hobbies h2{
+
+}
+
+.hobbies{
+    grid-area:hob;
+    /*width:997px;
+    height:295px;*/
+    background:#76238E;
+}
+
+.education{
+    grid-area:edu;
+    /*width: 376px;
+    height: 292px;
+    left: 1040px;
+    top: 618px;*/
+    background:#76238E;
+}
+
+footer{
+    grid-area:fot;
+
+}

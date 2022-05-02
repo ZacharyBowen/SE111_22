@@ -1,0 +1,200 @@
+@charset "UTF-8";
+*{
+    margin:0;
+}
+
+html, body{
+    margin:0;
+
+}  
+body{
+    
+}
+main{
+    background: #282828;
+}
+header{
+    display:flex;
+    flex-flow:row wrap;
+    flex-direction:row;
+    background:#070707; 
+    align-items:center;
+    height:100px;
+    justify-content:space-between;
+
+}
+
+h1{
+    font-family: 'Teko';
+    font-style: normal;
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 69px;
+    color: #BB0908;
+    background:#070707;
+}
+#social{
+    color: red;
+    justify-content:flex-end;
+}
+header i{
+    font-size:60px;
+}
+#banner{
+    display:flex;
+    flex-wrap:wrap;
+    flex-direction:column;
+    margin-bottom: 24px;
+    margin-right: 2opx;
+    float:left;
+    height:388px;
+    width:1440px;
+}   
+
+#right{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    background: #393939;
+    width:360px;
+    min-height:918px;
+}
+
+#right #sign{
+    margin: 24px 18px 31px 17px;
+    width: 325px;
+    height: 254px;
+}
+#right p{
+    margin: 31px 41px 24px 44px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: #FFFFFF;
+}
+#right b{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+    color:#FC0303;
+}
+#right #jasonunderwater{
+    margin:24px 17px 28.48px 18px;
+    width: 325px;
+    height: 170.52px;
+}
+
+#bottomleft{
+    display:flex;
+    margin: 0px 20px 24px 20px;
+    border-top: 5px solid #bb0908;
+    background-color:#393939;
+    width:700px;
+    min-height:481px;
+    float:left;
+}
+#bottomleft #poster{
+    float:left;
+    width:310px;
+    height:478px;
+    margin-right:19px;
+}
+
+#bottomleft h2{
+    text-align:center;
+    font-family: 'Rock Salt';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 72px;
+    color: #FF1D29;
+    border-bottom: solid 4px #BB0908;
+}
+#bottomleft p{
+    padding: 7px 20px 16px 19px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    color:#FFFFFF
+}
+
+#bottomleft #dvd{
+    padding:  15px 23px 20px 0px;
+    width:117px;
+    height:148px;
+}
+
+#bottomleftnav{
+    display:flex;
+    flex-direction:column;
+    min-height:157px;
+    float:right;
+    margin-right: 36px;
+}
+#bottomleftnav a:first-child{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    text-decoration-line: underline;
+    color: #22C1CB;
+}
+#bottomleftnav a:last-child{
+    font-family: 'Teko';
+    font-style: normal;
+    font-weight: 700, bold;
+    font-size: 72px;
+    line-height: 103px;
+    text-decoration-line: underline;
+    color:#FFFFFF;
+}
+
+#bottomright{
+    display:flex;
+    margin: 23px 20px 25px 20px;
+    min-height:481px;
+    width:700px;
+    flex-wrap:wrap;
+    flex-direction:column;
+    border-top: 5px solid #bb0908;
+    background-color:#393939;
+}
+#bottomright img{
+    padding:17px 35px 19px 24px;
+    width:641px;
+}
+#bottomright p{
+    padding: 19px 0px 19px 24px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    color: #FFFFFF;
+}
+
+footer{
+    display:flex;
+    flex-flow:row wrap;
+    flex-direction:row;
+    background:#070707; 
+    justify-content:flex-start;
+    align-items:center;
+    height:60px;
+    
+}
+footer p{
+    font-family: 'Teko';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 17px;
+    color: #BCBCBC;
+}
