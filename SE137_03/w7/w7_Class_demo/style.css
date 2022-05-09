@@ -1,0 +1,73 @@
+@charset "UTF-8";
+
+/*ORDER DOES MATTER smallest to greatest. Unless if you specify an and EXAMPLE:500 and 699*/
+/*em is used to make the font scale. 1em is 100% of the font size 16 (Can be changed). You can use decimals like 0.5 to change the size.*/
+/*rem takes a look at the root of the fonts *HTML* and only splits the number off of that.*/
+
+@media (min-width:500px)
+{
+    body
+    {
+    background-color:yellow;
+    transition:all 1s;
+    }
+    main{
+        width:100vw;
+    }
+    html{
+        font-size:48px;
+    }
+    header{
+        display:none;
+    }
+}
+
+@media (min-width:700px)
+{
+    body
+    {
+    background-color:orange;
+    transition:all 1s;
+    }
+    html{
+        font-size:32px;
+    }
+
+}
+
+@media (min-width:1000px)
+{
+    body
+    {
+    background-color:red;
+    transition:all 1s;
+    }
+    main{
+        width:50vw;
+    }
+    html{
+        font-size:16px;
+    }
+    header{
+        display:block;
+    }
+}
+
+main{
+    background-color:white;
+    border:1px solid black;
+    font-size:1rem;
+}
+header{
+    background-color:#ccc;
+    border:1px solid black;
+    width:100%;
+    box-sizing:border-box; /*Prevents border from popping out*/
+    font-size:.5rem;
+}
+p{
+    font-size:.5rem;
+}
+span{
+    font-size:.5rem;
+}

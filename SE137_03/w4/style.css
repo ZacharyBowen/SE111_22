@@ -15,7 +15,7 @@ html, body{
 
 }  
 body{
-    
+
 }
 main{
     display:grid;
@@ -57,9 +57,6 @@ header i{
     display:flex;
     flex-wrap:wrap;
     flex-direction:column;
-    margin-bottom: 24px;
-    margin-right: 20px;
-    float:left;
     height:388px;
     width:1440px;
 }   
@@ -71,7 +68,6 @@ header i{
     background: #393939;
     width:360px;
     min-height:918px;
-    float:right;
 
 }
 
@@ -110,7 +106,6 @@ header i{
     background-color:#393939;
     width:700px;
     min-height:481px;
-    float:left;
 }
 #bottomleft #poster{
     float:left;
@@ -142,14 +137,14 @@ header i{
 #bottomleft #dvd{
     padding:  15px 0px 20px 0px;
     width:117px;
-    height:148px;
+
 }
 
 #bottomleftnav{
     display:flex;
     flex-direction:column;
-    min-height:157px;
     float:right;
+    text-align:center;
     margin-right: 36px;
 }
 #bottomleftnav a:first-child{
@@ -166,15 +161,15 @@ header i{
     font-style: normal;
     font-weight: 700, bold;
     font-size: 72px;
-    line-height: 103px;
+    line-height: 2.8;
     text-decoration-line: underline;
     color:#FFFFFF;
 }
 
 #bottomright{
     display:flex;
-    margin: 23px 20px 25px 20px;
-    min-height:481px;
+    margin-right:20px;
+    margin-bottom:25px;
     width:700px;
     flex-wrap:wrap;
     flex-direction:column;
