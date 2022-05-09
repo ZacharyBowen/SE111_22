@@ -14,10 +14,13 @@ html body{
     }
     h1{
         font-size:2em;
+        text-decoration:underline;
+        color:black;
     }
     table thead{
         font-size:1.5em;
         background:#86AE47;
+        color:black;
         transition:all 1s;
     }
     table tbody{
@@ -25,8 +28,9 @@ html body{
     }
     body
     {
-    background-color:#EAF57F;
-    transition:all 1s;
+        background-color:#EAF57F;
+        color:purple;
+        transition:all 1s;
     }
     
 }
@@ -50,8 +54,9 @@ html body{
     }
     body
     {
-    background-color:#D3FB98;
-    transition:all 1s;
+        background-color:#D3FB98;
+        color:darkred;
+        transition:all 1s;
     }
 }
 
@@ -76,12 +81,11 @@ html body{
     }
     body
     {
-    background-color:palegreen;
-    transition:all 1s;
+        background-color:palegreen;
+        color:red;
+        transition:all 1s;
     }
 }
-
-
 
 html, body{
     margin:0;
