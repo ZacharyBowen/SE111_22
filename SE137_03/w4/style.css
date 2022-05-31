@@ -3,14 +3,27 @@
     margin:0;
 }
 
+.item1 { grid-area: header; }
+.item2 { grid-area: banner; }
+.item3 { grid-area: right; }
+.item4 { grid-area: bottomleft; }
+.item5 { grid-area: bottomright; }
+.item6 { grid-area: footer; }
+
 html, body{
     margin:0;
 
 }  
 body{
-    
+
 }
 main{
+    display:grid;
+    grid-template-areas: 'header header header header header'
+                         'banner banner banner banner right'
+                         'bottomleft bottomleft bottomright bottomright right'
+                         'footer footer footer footer footer';
+
     background: #282828;
 }
 header{
@@ -44,9 +57,6 @@ header i{
     display:flex;
     flex-wrap:wrap;
     flex-direction:column;
-    margin-bottom: 24px;
-    margin-right: 2opx;
-    float:left;
     height:388px;
     width:1440px;
 }   
@@ -58,6 +68,7 @@ header i{
     background: #393939;
     width:360px;
     min-height:918px;
+
 }
 
 #right #sign{
@@ -95,7 +106,6 @@ header i{
     background-color:#393939;
     width:700px;
     min-height:481px;
-    float:left;
 }
 #bottomleft #poster{
     float:left;
@@ -125,16 +135,16 @@ header i{
 }
 
 #bottomleft #dvd{
-    padding:  15px 23px 20px 0px;
+    padding:  15px 0px 20px 0px;
     width:117px;
-    height:148px;
+
 }
 
 #bottomleftnav{
     display:flex;
     flex-direction:column;
-    min-height:157px;
     float:right;
+    text-align:center;
     margin-right: 36px;
 }
 #bottomleftnav a:first-child{
@@ -151,15 +161,15 @@ header i{
     font-style: normal;
     font-weight: 700, bold;
     font-size: 72px;
-    line-height: 103px;
+    line-height: 2.8;
     text-decoration-line: underline;
     color:#FFFFFF;
 }
 
 #bottomright{
     display:flex;
-    margin: 23px 20px 25px 20px;
-    min-height:481px;
+    margin-right:20px;
+    margin-bottom:25px;
     width:700px;
     flex-wrap:wrap;
     flex-direction:column;

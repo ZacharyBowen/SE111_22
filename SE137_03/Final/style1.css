@@ -1,0 +1,61 @@
+@charset "UTF-8";
+*{
+
+}
+
+html, body{
+    margin:0;
+    height:100%;
+}
+
+main{
+    background-color: #6D7696;
+    display:flex; 
+}
+
+header{
+    color:white;
+}
+
+.carousel-inner img {
+    margin: auto;
+  }
+  
+nav{
+    background-color:#CC5543;    
+}
+
+header{
+    background-color: #59484F;
+}
+
+#ProjectDesc{
+    background-color: #DBE6AF;
+}
+#ProjectDesc h2{
+    text-decoration:underline;
+}
+
+#AboutMe h2{
+    text-decoration: underline;
+}
+
+#AboutMe{
+    background-color: #DBE6AF;
+}
+
+section{
+    padding-bottom: 5px;
+}
+
+#RepoLink{
+    background-color:#CC5543;
+}
+
+#SocialMedia{
+    background-color:#CC5543;
+}
+
+footer{
+    background-color:#EDB579;
+}
