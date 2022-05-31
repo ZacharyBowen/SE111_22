@@ -48,12 +48,16 @@ links{
     padding-bottom: 19px;
 }
 
+h2{
+    text-decoration:underline;
+}
+
 #RepoLink{
-    background-color:#CC5543;
+    background-color:#D9D9D9;
 }
 
 #SocialMedia{
-    background-color:#CC5543;
+    background-color:#D9D9D9;
 }
 
 footer{
