@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Week 2 Files</title>
+    <style type="text/css"> .border{border:1px solid black;} </style>
+</head>
+<body>
+    <script type="text/javascript">
+
+        //Use this Array of objects to complete the assignment.
+        var people =[
+            {first:"Jason", last:"Vorhees", credit:"Friday the 13th"},
+            {first:"Freddy", last:"Krueger", credit:"A Nightmare on Elm Street" },
+            {first:"Roger", last:"Rabbit", credit:"Who Framed Roger Rabbit" },
+            {first:"Kevin", last:"McCallister", credit:"Home Alone" },
+            {first:"Godzilla", last:"King of The Monsters", credit:"Godzilla" },
+            {first:"Buzz", last:"Lightyear", credit:"Toy Story" },
+            {first:"Marion", last:"Cobretti", credit:"Cobra" }
+            ]
+
+        //Stores body in a variable
+        var body = document.querySelector("body")
+
+        //Loops through the array
+        for (let i = 0; i < people.length; i++){
+
+            //Creates temporary local variable, stores the body tag in it.
+            var tempDiv = document.createElement("div")
+            tempDiv.appendChild(body)
+
+            //Adds id and class=border to tempDiv
+            tempDiv.setAttribute("id", String(i));
+            tempDiv.setAttribute("class", "border");
+            console.log(tempDiv)
+        }
+
+        //Loops through each property of object, and puts it into the div
+        for(let i in people){
+            var p = document.createElement("p");
+            var pNode = document.createTextNode(p, i);
+            pNode.appendChild(p);
+            p.appendChild(tempDiv);
+            console.log(tempDiv)
+
+        }
+        console.log(people);
+
+
+
+
+    </script> 
+</body>
+</html>
