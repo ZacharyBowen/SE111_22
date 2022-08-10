@@ -26,27 +26,21 @@
         for (let i = 0; i < people.length; i++){
 
             //Creates temporary local variable, stores the body tag in it.
-            var tempDiv = document.createElement("div")
-            tempDiv.appendChild(body)
+            var tempDiv = document.createElement("div");
+            body.appendChild(tempDiv);
 
             //Adds id and class=border to tempDiv
             tempDiv.setAttribute("id", String(i));
             tempDiv.setAttribute("class", "border");
-            console.log(tempDiv)
+
+            //Loops through each property of object, and puts it into the div
+            for(let i in people){
+                var p = document.createElement("p");
+                var pNode = document.createTextNode(p, i);
+                p.appendChild(pNode);
+                tempDiv.appendChild(p);
+            }
         }
-
-        //Loops through each property of object, and puts it into the div
-        for(let i in people){
-            var p = document.createElement("p");
-            var pNode = document.createTextNode(p, i);
-            pNode.appendChild(p);
-            p.appendChild(tempDiv);
-            console.log(tempDiv)
-
-        }
-        console.log(people);
-
-
 
 
     </script> 
